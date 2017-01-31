@@ -1,0 +1,347 @@
+<?php
+
+// Alma - Book
+// ?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2017-01-17T19:41:51IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com-scopus&req_id=17120171941509930732091591480649&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=A%20Wavelet%20Tour%20of%20Signal%20Processing&rft.aulast=Mallat&rft.auinit=S&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Mallat,%20S.&rft.aucorp=&rft.date=2009&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=%3Cxocs:firstpage%20xmlns:xocs=%22%22/%3E&rft.epage=&rft.pages=%3Cxocs:firstpage%20xmlns:xocs=%22%22/%3E&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9780123743701&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft.eisbn=&rft.edition=&rft.pub=Elsevier%20Inc.&rft.place=&rft.series=&rft.stitle=&rft.bici=&rft_id=info:bibcode/&rft_id=info:hdl/&rft_id=info:lccn/&rft_id=info:oclcnum/&rft_id=info:pmid/&rft_id=info:eric/&rft_dat=%3Cscopus%3E2-s2.0-84882135014%3C/scopus%3E,language=eng,view=TWINCITIES&svc_dat=viewit&req.skin=umn
+
+// Alma - Book (But really a journal article!)
+// ?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2017-01-24T11:19:18IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com-oxford&req_id=&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=document&rft.atitle=Nursing%20Home%20Staff%20Turnover:%20Impact%20on%20Nursing%20Home%20Compare%20Quality%20Measures&rft.jtitle=The%20Gerontologist&rft.btitle=&rft.aulast=Castle&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Castle,%20Nicholas%20G.&rft.aucorp=&rft.date=200710&rft.volume=47&rft.issue=5&rft.part=&rft.quarter=&rft.ssn=&rft.spage=650&rft.epage=661&rft.pages=650-661&rft.artnum=&rft.issn=0016-9013&rft.eissn=1758-5341&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1093/geront/47.5.650&rft.object_id=&rft.eisbn=&rft.edition=&rft.pub=Oxford%20University%20Press&rft.place=&rft.series=&rft.stitle=&rft.bici=&rft_id=info:bibcode/&rft_id=info:hdl/&rft_id=info:lccn/&rft_id=info:oclcnum/&rft_id=info:pmid/&rft_id=info:eric/&rft_dat=%3Coxford%3E650%3C/oxford%3E,language=eng,view=TWINCITIES&svc_dat=viewit&req.skin=umn
+
+// Alma - Journal
+// ?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2016-12-28T11:34:51IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com-medline&req_id=281220161132218611342743234843576&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Angular%20distribution%20of%20light%20scattered%20from%20a%20sinusoidal%20grating.&rft.jtitle=Applied%20optics&rft.btitle=&rft.aulast=Marx&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Marx,%20E&rft.aucorp=&rft.date=20000901&rft.volume=39&rft.issue=25&rft.part=&rft.quarter=&rft.ssn=&rft.spage=4473&rft.epage=&rft.pages=4473-85&rft.artnum=&rft.issn=0003-6935&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft.eisbn=&rft.edition=&rft.pub=&rft.place=&rft.series=&rft.stitle=&rft.bici=&rft_id=info:bibcode/&rft_id=info:hdl/&rft_id=info:lccn/&rft_id=info:oclcnum/&rft_id=info:pmid/18350034&rft_id=info:eric/&rft_dat=%3Cmedline%3E18350034%3C/medline%3E,language=eng,view=TWINCITIES&svc_dat=viewit&req.skin=umn
+
+// Alma - Series (Dirty bird)
+// ?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2017-01-02T12:28:59IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&ctx_id=10_12246119544080001701&ctx_enc=info:ofi/enc:UTF-8&rft.epage=265&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.volume=3903&rft.stitle=Indo-Russian%20Workshop%20on%20Micromechanical%20Systems%20:%202-4%20February%201999,%20New%20Delhi,%20India&rft.series=Indo-Russian%20Workshop%20on%20Micromechanical%20Systems&rft.place=%5BPlace%20of%20publication%20not%20identified%5D&response_type=xml&isSerivcesPage=true&available_services=viewit&available_services=getit&rft.btitle=INDO-RUSSIAN%20WORKSHOP%20ON%20MICROMECHANICAL%20SYSTEMS&rft.isbn_13=978-0-8194-3513-2&rft.genre=proceeding&rft.aufirst=Vladimir%20I&rft.aufirst=Vinoy%20K&rft.isbn_10=0-8194-3513-9&institution=1701&rft.tpages=34&rft.doi=10.1117/12.369465&rft.year=1999&rft_id=info:doi/10.1117/12.369465&rft.orig_genre=proceeding&inventory_id=51539868530001701&rft.inventory_id=51539868530001701&rft.aulast=Pustovoy&rft.aulast=Jain&publication_place=%5BPlace%20of%20publication%20not%20identified%5D&rft.object_type=BOOK&url_ver=Z39.88-2004&rft.date=1999&ctx_id=10_1&ctx_id=2246119544080001701&full_text_indicator=true&rft.title=Indo-Russian%20Workshop%20on%20Micromechanical%20Systems%20:%202-4%20February%201999,%20New%20Delhi,%20India&rft.pub=SPIE&ctx_tim=1483381739340&ctx_ver=Z39.88-2004&licenseEnable=false&rft.isbn=0-8194-3513-9&rft.jtitle=Indo-Russian%20Workshop%20on%20Micromechanical%20Systems%20:%202-4%20February%201999,%20New%20Delhi,%20India&sfx.sid=www.isinet.com:WoK:WOS&rft.pages=232-265&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&sfx.doi_url=http://dx.doi.org&rft.spage=232&rft.issn=0277-786X&rft.mms_id=9968301650001701&rfr_id=info:sid/www.isinet.com:WoK:WOS&rft.publisher=SPIE&rft.au=Indo-Russian%20Workshop%20on%20Micromechanical%20Systems%20Corporate%20Author&rft.pubdate=1999&rft.atitle=%3Ctitle%3EMagnetoelectric%20materials:%20some%20recent%20results%20and%20possible%20applications%3C/title%3E&customer=1700&rfr.rfr=www.isinet.com:WoK:WOS&rft_dat=language=eng,view=TWINCITIES_SP&svc_dat=viewit&svc.profile=viewit&req.skin=umn
+
+// Genre - Flow from here
+/*
+// Metadata Value Format
+rft_val_fmt - required
+> info:ofi/fmt:kev:mtx:journal (Journal)
+> info:ofi/fmt:kev:mtx:book (Book)
+> info:ofi/fmt:kev:mtx:patent (Patent)
+> info:ofi/fmt:kev:mtx:sch_svc (Service Types / Scholarly Communication)
+> info:ofi/fmt:kev:mtx:dissertation (Dissertation)
+
+// Metadata Values
+Author - aulast, aufirst, auinit, auinit1, auinitm, ausuffix, au, aucorp
+Title - btitle, atitle, title, jtitle, stitle,
+place, pub, date
+edition
+series
+tpages, spage, epage, pages
+issn, isbn, bici
+genre
+*/
+
+// Local functions
+function authorName($arr_keys, $ctx){
+  $all_author_keys = array('aulast', 'aufirst', 'auinit', 'auinit1', 'auinitm', 'ausuffix', 'au', 'author');
+  $partial_author_keys = array('aulast', 'aufirst', 'auinit', 'auinit1', 'auinitm', 'ausuffix');
+
+  if(count(array_intersect($arr_keys, $all_author_keys)) < 1) {
+    return $author = '';
+  } elseif($ctx->getReferent()->getValue('au')) {
+      return $ctx->getReferent()->getValue('au');
+  } elseif($ctx->getReferent()->getValue('author')){
+      return $ctx->getReferent()->getValue('author');
+  } else {
+      $author = array();
+      foreach($partial_author_keys as $key) {
+        array_push($author, $ctx->getReferent()->getValue($key));
+      }
+      return join(' ', $author);
+  }
+}
+
+function cleanData($var){
+  $var = urldecode($var);
+	$var = preg_replace('/\"/','',$var);
+  return $var;
+}
+
+// Load OpenURL library
+$root = getcwd();
+require_once $root . '/php-niso-openurl-master/src/OpenURL/ContextObject.php';
+require_once $root . '/php-niso-openurl-master/src/OpenURL/Entity.php';
+
+// Request
+$kev = $_SERVER['QUERY_STRING'];
+$ctx = \OpenURL\ContextObject::loadKev($kev);
+
+// Default Vars
+$mncat = isset($_GET['mncat']) ? $_GET['mncat'] : '';
+$submit = isset($_GET['submit']) ? $_GET['submit'] : '';
+$name = isset($_GET['name']) ? $_GET['name'] : '';
+$email = isset($_GET['email']) ? $_GET['email'] : '';
+$dept = isset($_GET['dept']) ? $_GET['dept'] : '';
+$ucard = isset($_GET['ucard']) ? $_GET['ucard'] : '';
+$phone = isset($_GET['phone']) ? $_GET['phone'] : '';
+$address1 = isset($_GET['address1']) ? $_GET['address1'] : '';
+$address2 = isset($_GET['address2']) ? $_GET['address2'] : '';
+$status = isset($_GET['status']) ? $_GET['status'] : '';
+$need = isset($_GET['need']) ? $_GET['need'] : '';
+$copyright = isset($_GET['copyright']) ? $_GET['copyright'] : '';
+
+$title = isset($_GET['title']) ? $_GET['title'] : '';
+$atitle = isset($_GET['atitle']) ? $_GET['atitle'] : '';
+$btitle = isset($_GET['btitle']) ? $_GET['btitle'] : '';
+$jtitle = isset($_GET['jtitle']) ? $_GET['jtitle'] : '';
+$stitle = isset($_GET['stitle']) ? $_GET['stitle'] : '';
+
+$author = isset($_GET['author']) ? $_GET['author'] : '';
+
+$issn = isset($_GET['issn']) ? $_GET['issn'] : '';
+$isbn = isset($_GET['isbn']) ? $_GET['isbn'] : '';
+$source = isset($_GET['source']) ? $_GET['source'] : '';
+$date = isset($_GET['date']) ? $_GET['date'] : '';
+$volume = isset($_GET['volume']) ? $_GET['volume'] : '';
+$issue = isset($_GET['issue']) ? $_GET['issue'] : '';
+$spage = isset($_GET['spage']) ? $_GET['spage'] : '';
+$pages = isset($_GET['pages']) ? $_GET['pages'] : '';
+
+// OpenURL vars
+if ($ctx->getReferent() === NULL) {
+  // No request to parse
+} else {
+
+  // Titles
+  $title = $ctx->getReferent()->getValue('title') ? $ctx->getReferent()->getValue('title') : '';
+  $atitle = $ctx->getReferent()->getValue('atitle') ? $ctx->getReferent()->getValue('atitle') : '';
+  $btitle = $ctx->getReferent()->getValue('btitle') ? $ctx->getReferent()->getValue('btitle') : '';
+  $jtitle = $ctx->getReferent()->getValue('jtitle') ? $ctx->getReferent()->getValue('jtitle') : '';
+  $stitle = $ctx->getReferent()->getValue('stitle') ? $ctx->getReferent()->getValue('stitle') : '';
+
+  // Author
+  $author = authorName($ctx->getReferent()->getValueKeys(), $ctx);
+
+  // Identifiers
+  $issn = $ctx->getReferent()->getValue('issn') ? $ctx->getReferent()->getValue('issn') : $issn;
+  $isbn = $ctx->getReferent()->getValue('isbn') ? $ctx->getReferent()->getValue('isbn') : $isbn;
+
+  $source = $ctx->getReferent()->getValue('source') ? $ctx->getReferent()->getValue('source') : '';
+
+  $date = $ctx->getReferent()->getValue('date') ? $ctx->getReferent()->getValue('date') : '';
+  $volume = $ctx->getReferent()->getValue('volume') ? $ctx->getReferent()->getValue('volume') : '';
+  $issue = $ctx->getReferent()->getValue('issue') ? $ctx->getReferent()->getValue('issue') : '';
+  $spage = $ctx->getReferent()->getValue('spage') ? $ctx->getReferent()->getValue('spage') : '';
+  $pages = $ctx->getReferent()->getValue('pages') ? $ctx->getReferent()->getValue('pages') : '';
+}
+
+?>
+
+<html>
+<head>
+<title>U of M - Crookston:  Library ILL</title>
+<link rel="stylesheet" href="http://www1.crk.umn.edu/library/prod/fragments/umc_hdr_fragment/lib/css/text.css" type="text/css" />
+<link rel="stylesheet" href="http://www1.crk.umn.edu/library/prod/fragments/umc_hdr_fragment/lib/css/template.css" type="text/css" />
+<link rel="stylesheet" href="http://www1.crk.umn.edu/library/prod/fragments/umc_hdr_fragment/lib/css/optional.css" type="text/css" />
+
+</head>
+<body bgcolor="#ffffff">
+<div align="center">
+<a href="http://www1.crk.umn.edu/library/"><img src="http://umclibrary.crk.umn.edu/images/newlibraryhead.jpg " border="0" alt="University of Minnesota - Crookston, UMC Library"></a><br><br>
+
+<form action="illalma.php" method="get">
+
+<?php
+	print "<h2 align=\"center\">Interlibrary Loan Request Form</h2>\n";
+
+if (($submit) && (($btitle || $isbn || (($title || $issn) && ($copyright == "1"))) && ($name && $email && $address1 && $need))) {
+
+	include("mailsfx_new.phtml");
+
+} else {
+
+	if ($submit) {
+
+		print "<ul>\n";
+		if ((!($btitle || $atitle || $title)) && (!($issn))) {
+
+			print "<li class=\"error\">You must fill out a title field</li>\n";
+		}
+
+		if (($name == "") || ($name == " ")) {
+
+			print "<li class=\"error\">You must fill out your name</li>\n";
+
+		}
+
+		if (!($email)) {
+
+			print "<li class=\"error\">You must fill out your email address</li>\n";
+
+		}
+		if (($address1 == "") || ($address1 == " ")) {
+
+			print "<li class=\"error\">You must fill out your Campus Address/P.O. Box</li>\n";
+
+		}
+		if (($need == "") || ($need == " ")) {
+
+			print "<li class=\"error\">You must fill out the \"Date after which this is no longer needed\"</li>\n";
+
+		}
+		if (!$copyright) {
+			print "<li class=\"error\">Please indicate that you have read and agree to the <a href=\"javascript:openWin3();\">copyright notice</a> by checking the box above the submit button</li>\n";
+		}
+	print "</ul>\n";
+	}
+
+?>
+
+
+<script language="JavaScript">
+	<!--
+	function openWin3() {
+		aWindow=window.open("copyright.phtml","thewindow","toolbar=no,width=450,height=500")
+	}
+	// -->
+</script>
+
+
+<div class="small">
+<?php
+
+if (($issn || $isbn || $title || $btitle || $abbrev || $ctitle) && ($mncat != "0")) {
+	print "<input type=\"hidden\" name=\"mncat\" value=\"0\">\n";
+}
+
+?>
+
+
+<table width="700">
+<tr>
+<td valign="top" width="325">
+<b>Your Request</b>
+<table border="0">
+<?php
+$mailBody = '';
+
+  $atitle = cleanData($atitle);
+	print "<tr><td class=\"small\" align=\"right\">* Article title:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"atitle\" value=\"$atitle\"></td></tr>\n";
+	$mailBody .= "Article title: $atitle\n";
+
+  $jtitle = cleanData($jtitle);
+	print "<tr><td class=\"small\" align=\"right\">* Journal title:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"jtitle\" value=\"$jtitle\"></td></tr>\n";
+	$mailBody .= "Journal title: $jtitle\n";
+
+  $stitle = cleanData($stitle);
+	print "<tr><td class=\"small\" align=\"right\">Abbreviated title:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"stitle\" value=\"$stitle\"></td></tr>\n";
+	$mailBody .= "Abbreviated title: $stitle\n";
+
+  $btitle = cleanData($btitle);
+	print "<tr><td class=\"small\" align=\"right\">Book title:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"btitle\" value=\"$btitle\"></td></tr>\n";
+	$mailBody .= "Book title:  $btitle\n";
+
+	print "<tr><td class=\"small\" align=\"right\">ISSN:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"issn\" value=\"$issn\"></td></tr>\n";
+	$mailBody .= "ISSN:  $issn\n";
+
+  print "<tr><td class=\"small\" align=\"right\">ISBN:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"isbn\" value=\"$isbn\"></td></tr>\n";
+	$mailBody .= "ISBN:  $isbn\n";
+
+  $author = cleanData($author);
+	print "<tr><td class=\"small\" align=\"right\">Author:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"author\" value=\"$author\"></td></tr>\n";
+	$mailBody .= "Author:  $author\n";
+
+	print "<tr><td class=\"small\" align=\"right\">* Date:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"date\" value=\"$date\"></td></tr>\n";
+	$mailBody .= "Date: $date\n";
+
+	print "<tr><td class=\"small\" align=\"right\">Volume:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"volume\" value=\"$volume\"></td></tr>\n";
+	$mailBody .= "Volume:  $volume\n";
+
+	print "<tr><td class=\"small\" align=\"right\">Issue:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"issue\" value=\"$issue\"></td></tr>\n";
+	$mailBody .= "Issue:  $issue\n";
+
+	print "<tr><td class=\"small\" align=\"right\">* Page(s):</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"pages\" value=\"$pages\"></td></tr>\n";
+	$mailBody .= "Page: $pages\n";
+?>
+<tr>
+<td class="small" align="right">Additional Info:  </td><td> <input class="small" type="text" size="30" name="notes" value=""></td>
+</tr>
+<tr>
+<td class="small" align="right">* Date after which this is no longer needed:</td><td valign="top"><input size="30" class="small" type="text" name="need" value="<?php print "$need"; ?>"></td>
+</tr>
+<!--<tr>
+<td class="small" align="right" valign="top"><input type="checkbox" name="electronic" value="1" ></td><td class="small"> Check this box if you would like to receive this item electronically</td>
+</tr>-->
+</table>
+</td>
+<td width="25">&nbsp;</td>
+<td valign="top" width="325">
+<b>Your Personal Information</b><br>
+<!--<span class="smaller">ILL will communicate by e-mail unless the e-mail field is deleted. </span><br>-->
+<table border="0">
+<tr>
+<td class="small" align="right">* Name:</td><td><input required="required" size="30" class="small" type="text" name="name" value="<?php print $name ?>"></td>
+</tr>
+<tr>
+<td class="small" align="right">* Email:</td><td><input required="required" size="30" type="text" class="small" name="email" value="<?php print $email ?>"></td>
+</tr>
+<tr>
+<td class="small" align="right">Discipline/Dept:</td><td><input size="30" type="text" class="small" name="dept" value="<?php print $dept ?>"></td>
+<tr>
+<td class="small" align="right">U Card Library #:</td><td><input size="30" type="text" class="small" name="ucard" value="<?php print $ucard ?>"></td>
+</tr>
+<tr>
+<td class="small" align="right">* Phone:</td><td><input required="required" size="30" type="text" class="small" name="phone" value="<?php print $phone ?>"></td>
+</tr>
+
+<tr>
+<td class="small" align="right">* Address 1:</td><td><input required="required" size="30" class="small" type="text" name="address1" value="<?php print $address1 ?>"></td>
+</tr>
+<tr>
+<td class="small" align="right">Address 2:</td><td><input size="30" class="small" type="text" name="address2" value="<?php print $address2 ?>"></td>
+</tr>
+<tr>
+<td class="small" align="right">Status:</td>
+<td>
+<select name="status">
+<option value="">Please select&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</option>
+<option value="UMC Student" <?php if ($status == "UMC Student") { print "selected"; }?>>UMC Student</option>
+<option value="UMC Distance Student" <?php if ($status == "UMC Distance Student") { print "selected"; }?>>UMC Distance Student</option>
+<option value="UMC Faculty/Staff" <?php if ($status == "UMC Faculty/Staff") { print "selected"; }?>>UMC Faculty/Staff</option>
+</select>
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+
+
+<tr>
+<td colspan="3" align="center" class="small">
+<p>* Required Fields</p>
+
+<p>* <b style="font-size: 14px;"><input required="required" type="checkbox" name="copyright" value="1">I have read the <a href="javascript:openWin3();">copyright notice</a> and to the best of my knowledge I am not in violation of copyright restrictions</b></p>
+<?php print "<input type=\"hidden\" name=\"source\" value=\"$source\">\n"; ?>
+<input type="submit" name="submit" value="Submit your request!">
+</form><br>
+</td>
+</tr>
+</table>
+</div>
+
+<?php } ?>
+</div>
+
+
+<hr width="90%">
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+
+    <td valign="top" width="190"></td>
+    <td valign="bottom" width="415"><font size="1" face="Arial">
+    &copy; 2017 by the Regents of the University of Minnesota. All rights reserved.<br />
+<a href="http://www.fpd.finop.umn.edu/groups/ppd/documents/policy/Acceptable_Use.cfm">Acceptable Use of Information Technology Resources</a><br />
+<br />
+The University of Minnesota is an equal opportunity educator and employer.
+</td>
+</tr>
+</table>
+</body>
+</html>

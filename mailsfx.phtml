@@ -1,0 +1,155 @@
+<?php
+
+$mncat = isset($_GET['mncat']) ? $_GET['mncat'] : '';
+$submit = isset($_GET['submit']) ? $_GET['submit'] : '';
+
+$name = isset($_GET['name']) ? $_GET['name'] : '';
+$email = isset($_GET['email']) ? $_GET['email'] : '';
+$address1 = isset($_GET['address1']) ? $_GET['address1'] : '';
+$need = isset($_GET['need']) ? $_GET['need'] : '';
+$copyright = isset($_GET['copyright']) ? $_GET['copyright'] : '';
+
+
+$dept = isset($_GET['dept']) ? $_GET['dept'] : '';
+$ucard = isset($_GET['ucard']) ? $_GET['ucard'] : '';
+$status = isset($_GET['status']) ? $_GET['status'] : '';
+$address2 = isset($_GET['address2']) ? $_GET['address2'] : '';
+$phone = isset($_GET['phone']) ? $_GET['phone'] : '';
+
+$title = isset($_GET['title']) ? $_GET['title'] : '';
+$atitle = isset($_GET['atitle']) ? $_GET['atitle'] : '';
+$btitle = isset($_GET['btitle']) ? $_GET['btitle'] : '';
+$jtitle = isset($_GET['jtitle']) ? $_GET['jtitle'] : '';
+$stitle = isset($_GET['stitle']) ? $_GET['stitle'] : '';
+
+$author = isset($_GET['author']) ? $_GET['author'] : '';
+
+$issn = isset($_GET['issn']) ? $_GET['issn'] : '';
+$isbn = isset($_GET['isbn']) ? $_GET['isbn'] : '';
+
+$source = isset($_GET['source']) ? $_GET['source'] : '';
+
+$date = isset($_GET['date']) ? $_GET['date'] : '';
+$volume = isset($_GET['volume']) ? $_GET['volume'] : '';
+$issue = isset($_GET['issue']) ? $_GET['issue'] : '';
+$spage = isset($_GET['spage']) ? $_GET['spage'] : '';
+$pages = isset($_GET['pages']) ? $_GET['pages'] : '';
+$notes = isset($_GET['notes']) ? $_GET['notes'] : '';
+?>
+
+<p>Thanks for your request.  Below is what we received:</p>
+
+<table>
+<tr>
+<td>
+<?php
+
+$mailBody = empty($mailBody) ? '' : $mailBody;
+$mailBody .= "The Request\n\n";
+print "<b>Your Request</b><br><br>\n";
+
+if (isset($atitle)) {
+	$atitle = preg_replace('/\"/','',$atitle);
+	$mailBody .= "Article title: $atitle\n";
+	print "Article title:  $atitle<br>\n";
+}
+if (isset($jtitle)) {
+	$jtitle = preg_replace('/\"/','',$jtitle);
+	$mailBody .= "Journal title: $jtitle\n";
+	print "Journal title: $jtitle<br>\n";
+}
+if ($btitle != "") {
+	$btitle = preg_replace('/\"/','',$btitle);
+	$mailBody .= "Book title:  $btitle\n";
+	print "Book title:  $btitle<br>\n";
+}
+if ($stitle) {
+	$mailBody .= "Abbreviated title: $stitle\n";
+	print "Abbreviated title: $stitle<br>\n";
+}
+if ($issn){
+	$mailBody .= "ISSN:  $issn\n";
+	print "ISSN:  $issn<br>\n";
+}
+if ($isbn){
+    $mailBody .= "ISBN:  $isbn\n";
+	print "ISBN:  $isbn<br>\n";
+}
+if (isset($author)) {
+	$mailBody .= "Author:  $author\n";
+	print "Author:  $author<br>\n";
+}
+if ($date) {
+	$mailBody .= "Date: $date\n";
+	print "Date: $date<br>\n";
+}
+if ($volume) {
+	$mailBody .= "Volume:  $volume\n";
+	print "Volume:  $volume<br>\n";
+}
+if ($issue) {
+	$mailBody .= "Issue:  $issue\n";
+	print "Issue:  $issue<br>\n";
+}
+if ($pages) {
+	$mailBody .= "Page: $pages\n";
+	print "Page: $pages<br>\n";
+}
+if ($notes) {
+	$mailBody .= "Additional information:  $notes\n";
+	print "Additional Info:  $notes<br>\n";
+}
+if ($source) {
+	$mailBody .= "Source:  $source\n";
+}
+if ($need){
+	$mailBody .= "Don't need after: $need\n";
+	print "Date after which item is no longer needed: $need<br>\n";
+}
+
+$mailBody .= "\nThe User\n\n";
+print "<br><b>Personal Information</b><br><br>\n";
+
+if (isset($name)) {
+	$mailBody .= "Name: $name\n";
+	print "Name: $name<br>\n";
+}
+if (isset($email)) {
+	$mailBody .= "Email:  $email\n";
+	print "Email:  $email<br>\n";
+}
+if (isset($dept)) {
+	$mailBody .= "Department:  $dept\n";
+	print "Department:  $dept<br>\n";
+}
+if ($ucard){
+	$mailBody .= "U Card #:  $ucard\n";
+	print "U Card #:  $ucard<br>\n";
+}
+if ($phone){
+    $mailBody .= "Phone:  $phone\n";
+	print "Phone:  $phone<br>\n";
+}
+if (isset($address1)) {
+	$mailBody .= "Address1:  $address1\n";
+	print "Address1:  $address1<br>\n";
+}
+if ($address2) {
+	$mailBody .= "Address2: $address2\n";
+	print "Address2: $address2<br>\n";
+}
+if ($status) {
+	$mailBody .= "Status:  $status\n";
+	print "Status:  $status<br>\n";
+}
+
+//$to = "library@mail.crk.umn.edu";
+$to = "umcill@umn.edu"; (CURRENT)
+//$to = "kyoungst@crk.umn.edu"; (TEST)
+
+mail("$to","ILL Request from Alma!","$mailBody", "From:  $email");
+
+?>
+</td>
+</tr>
+</table>

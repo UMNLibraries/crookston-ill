@@ -53,12 +53,6 @@ function authorName($arr_keys, $ctx){
   }
 }
 
-function cleanData($var){
-  $var = urldecode($var);
-	$var = preg_replace('/\"/','',$var);
-  return $var;
-}
-
 // Load OpenURL library
 $root = getcwd();
 require_once $root . '/php-niso-openurl-master/src/OpenURL/ContextObject.php';
@@ -127,6 +121,17 @@ if ($ctx->getReferent() === NULL) {
   $pages = $ctx->getReferent()->getValue('pages') ? $ctx->getReferent()->getValue('pages') : '';
 }
 
+// Santitize for HTML
+$properties = array(
+	'mncat','submit','name','email','dept','ucard','phone','address1','address2','status',
+	'need','copyright',
+	'title','atitle','btitle','jtitle','stitle',
+	'author','issn','isbn','source','date','volume','issue','spage','pages'
+);
+foreach ($properties as $prop) {
+	$$prop = htmlspecialchars($$prop);
+}
+
 ?>
 
 <html>
@@ -141,7 +146,7 @@ if ($ctx->getReferent() === NULL) {
 <div align="center">
 <a href="http://www1.crk.umn.edu/library/"><img src="http://umclibrary.crk.umn.edu/images/newlibraryhead.jpg " border="0" alt="University of Minnesota - Crookston, UMC Library"></a><br><br>
 
-<form action="illalma.php" method="get">
+<form action="illalma.phtml" method="get">
 
 <?php
 	print "<h2 align=\"center\">Interlibrary Loan Request Form</h2>\n";
@@ -202,7 +207,7 @@ if (($submit) && (($btitle || $isbn || (($title || $issn) && ($copyright == "1")
 <div class="small">
 <?php
 
-if (($issn || $isbn || $title || $btitle || $abbrev || $ctitle) && ($mncat != "0")) {
+if (($issn || $isbn || $title || $btitle || $stitle || $jtitle) && ($mncat != "0")) {
 	print "<input type=\"hidden\" name=\"mncat\" value=\"0\">\n";
 }
 
@@ -217,19 +222,15 @@ if (($issn || $isbn || $title || $btitle || $abbrev || $ctitle) && ($mncat != "0
 <?php
 $mailBody = '';
 
-  $atitle = cleanData($atitle);
 	print "<tr><td class=\"small\" align=\"right\">* Article title:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"atitle\" value=\"$atitle\"></td></tr>\n";
 	$mailBody .= "Article title: $atitle\n";
 
-  $jtitle = cleanData($jtitle);
 	print "<tr><td class=\"small\" align=\"right\">* Journal title:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"jtitle\" value=\"$jtitle\"></td></tr>\n";
 	$mailBody .= "Journal title: $jtitle\n";
 
-  $stitle = cleanData($stitle);
 	print "<tr><td class=\"small\" align=\"right\">Abbreviated title:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"stitle\" value=\"$stitle\"></td></tr>\n";
 	$mailBody .= "Abbreviated title: $stitle\n";
 
-  $btitle = cleanData($btitle);
 	print "<tr><td class=\"small\" align=\"right\">Book title:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"btitle\" value=\"$btitle\"></td></tr>\n";
 	$mailBody .= "Book title:  $btitle\n";
 
@@ -239,7 +240,6 @@ $mailBody = '';
   print "<tr><td class=\"small\" align=\"right\">ISBN:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"isbn\" value=\"$isbn\"></td></tr>\n";
 	$mailBody .= "ISBN:  $isbn\n";
 
-  $author = cleanData($author);
 	print "<tr><td class=\"small\" align=\"right\">Author:</td><td><input size=\"30\" class=\"small\" type=\"text\" name=\"author\" value=\"$author\"></td></tr>\n";
 	$mailBody .= "Author:  $author\n";
 

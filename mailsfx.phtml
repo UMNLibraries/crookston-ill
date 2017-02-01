@@ -51,60 +51,60 @@ print "<b>Your Request</b><br><br>\n";
 if (isset($atitle)) {
 	$atitle = preg_replace('/\"/','',$atitle);
 	$mailBody .= "Article title: $atitle\n";
-	print "Article title:  $atitle<br>\n";
+	print "Article title: " . htmlspecialchars($atitle) . "<br>\n";
 }
 if (isset($jtitle)) {
 	$jtitle = preg_replace('/\"/','',$jtitle);
 	$mailBody .= "Journal title: $jtitle\n";
-	print "Journal title: $jtitle<br>\n";
+	print "Journal title: " . htmlspecialchars($jtitle) . "<br>\n";
 }
 if ($btitle != "") {
 	$btitle = preg_replace('/\"/','',$btitle);
 	$mailBody .= "Book title:  $btitle\n";
-	print "Book title:  $btitle<br>\n";
+	print "Book title:  " . htmlspecialchars($btitle) . "<br>\n";
 }
 if ($stitle) {
 	$mailBody .= "Abbreviated title: $stitle\n";
-	print "Abbreviated title: $stitle<br>\n";
+	print "Abbreviated title: " . htmlspecialchars($stitle) . "<br>\n";
 }
 if ($issn){
 	$mailBody .= "ISSN:  $issn\n";
-	print "ISSN:  $issn<br>\n";
+	print "ISSN:  " . htmlspecialchars($issn) . "<br>\n";
 }
 if ($isbn){
     $mailBody .= "ISBN:  $isbn\n";
-	print "ISBN:  $isbn<br>\n";
+	print "ISBN:  " . htmlspecialchars($isbn) . "<br>\n";
 }
 if (isset($author)) {
 	$mailBody .= "Author:  $author\n";
-	print "Author:  $author<br>\n";
+	print "Author:  " . htmlspecialchars($author) . "<br>\n";
 }
 if ($date) {
 	$mailBody .= "Date: $date\n";
-	print "Date: $date<br>\n";
+	print "Date: " . htmlspecialchars($date) . "<br>\n";
 }
 if ($volume) {
 	$mailBody .= "Volume:  $volume\n";
-	print "Volume:  $volume<br>\n";
+	print "Volume:  " . htmlspecialchars($volume) . "<br>\n";
 }
 if ($issue) {
 	$mailBody .= "Issue:  $issue\n";
-	print "Issue:  $issue<br>\n";
+	print "Issue:  " . htmlspecialchars($issue) . "<br>\n";
 }
 if ($pages) {
 	$mailBody .= "Page: $pages\n";
-	print "Page: $pages<br>\n";
+	print "Page: " . htmlspecialchars($pages) . "<br>\n";
 }
 if ($notes) {
 	$mailBody .= "Additional information:  $notes\n";
-	print "Additional Info:  $notes<br>\n";
+	print "Additional Info:  " . htmlspecialchars($notes) . "<br>\n";
 }
 if ($source) {
 	$mailBody .= "Source:  $source\n";
 }
 if ($need){
 	$mailBody .= "Don't need after: $need\n";
-	print "Date after which item is no longer needed: $need<br>\n";
+	print "Date after which item is no longer needed: " . htmlspecialchars($need) . "<br>\n";
 }
 
 $mailBody .= "\nThe User\n\n";
@@ -112,40 +112,40 @@ print "<br><b>Personal Information</b><br><br>\n";
 
 if (isset($name)) {
 	$mailBody .= "Name: $name\n";
-	print "Name: $name<br>\n";
+	print "Name: " . htmlspecialchars($name) . "<br>\n";
 }
 if (isset($email)) {
 	$mailBody .= "Email:  $email\n";
-	print "Email:  $email<br>\n";
+	print "Email:  " . htmlspecialchars($email) . "<br>\n";
 }
 if (isset($dept)) {
 	$mailBody .= "Department:  $dept\n";
-	print "Department:  $dept<br>\n";
+	print "Department:  " . htmlspecialchars($dept) . "<br>\n";
 }
 if ($ucard){
 	$mailBody .= "U Card #:  $ucard\n";
-	print "U Card #:  $ucard<br>\n";
+	print "U Card #:  " . htmlspecialchars($ucard) . "<br>\n";
 }
 if ($phone){
     $mailBody .= "Phone:  $phone\n";
-	print "Phone:  $phone<br>\n";
+	print "Phone:  " . htmlspecialchars($phone) . "<br>\n";
 }
 if (isset($address1)) {
 	$mailBody .= "Address1:  $address1\n";
-	print "Address1:  $address1<br>\n";
+	print "Address1:  " . htmlspecialchars($address1) . "<br>\n";
 }
 if ($address2) {
 	$mailBody .= "Address2: $address2\n";
-	print "Address2: $address2<br>\n";
+	print "Address2: " . htmlspecialchars($address2) . "<br>\n";
 }
 if ($status) {
 	$mailBody .= "Status:  $status\n";
-	print "Status:  $status<br>\n";
+	print "Status:  " . htmlspecialchars($status) . "<br>\n";
 }
 
 //$to = "library@mail.crk.umn.edu";
 //$to = "umcill@umn.edu"; (CURRENT)
-$to = "kyoungst@crk.umn.edu"; (TEST)
+$to = "kyoungst@crk.umn.edu"; //(TEST)
 
 mail("$to","ILL Request from Alma!","$mailBody", "From:  $email");
 
